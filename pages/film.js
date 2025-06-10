@@ -1,68 +1,47 @@
+let scrollY = 0;
+
 function showElement(modeNumber) {
-    console.log(modeNumber)
-    if (modeNumber == 1){
-        document.getElementById('modal-days').style.display = 'flex';
-    }
+    const modalIds = [
+        'modal-days',
+        'modal-love',
+        'modal-which',
+        'modal-knight',
+        'modal-watchmen',
+        'modal-leap',
+        'modal-aesthete',
+        'modal-sister'
+    ];
 
-    else if (modeNumber == 2){
-        document.getElementById('modal-love').style.display = 'flex';
-    }
+    const modalId = modalIds[modeNumber - 1];
+    const modal = document.getElementById(modalId);
 
-    else if (modeNumber == 3){
-        document.getElementById('modal-which').style.display = 'flex';
-    }
-
-    else if (modeNumber == 4){
-        document.getElementById('modal-knight').style.display = 'flex';
-    }
-
-    else if (modeNumber == 5){
-        document.getElementById('modal-watchmen').style.display = 'flex';
-    }
-
-    else if (modeNumber == 6){
-        document.getElementById('modal-leap').style.display = 'flex';
-    }
-
-    else if (modeNumber == 7){
-        document.getElementById('modal-aesthete').style.display = 'flex';
-    }
-
-    else if (modeNumber == 8){
-        document.getElementById('modal-sister').style.display = 'flex';
+    if (modal) {
+        scrollY = window.scrollY;
+        document.body.style.top = `-${scrollY}px`;
+        document.body.classList.add('modal-open');
+        modal.style.display = 'flex';
     }
 }
 
-function hideElement(modeNumber){
-    if (modeNumber == 1){
-        document.getElementById('modal-days').style.display = 'none';
-    }
+function hideElement(modeNumber) {
+    const modalIds = [
+        'modal-days',
+        'modal-love',
+        'modal-which',
+        'modal-knight',
+        'modal-watchmen',
+        'modal-leap',
+        'modal-aesthete',
+        'modal-sister'
+    ];
 
-    else if (modeNumber == 2){
-        document.getElementById('modal-love').style.display = 'none';
-    }
+    const modalId = modalIds[modeNumber - 1];
+    const modal = document.getElementById(modalId);
 
-    else if (modeNumber == 3){
-        document.getElementById('modal-which').style.display = 'none';
-    }
-
-    else if (modeNumber == 4){
-        document.getElementById('modal-knight').style.display = 'none';
-    }
-
-    else if (modeNumber == 5){
-        document.getElementById('modal-watchmen').style.display = 'none';
-    }
-
-    else if (modeNumber == 6){
-        document.getElementById('modal-leap').style.display = 'none';
-    }
-
-    else if (modeNumber == 7){
-        document.getElementById('modal-aesthete').style.display = 'none';
-    }
-
-    else if (modeNumber == 8){
-        document.getElementById('modal-sister').style.display = 'none';
+    if (modal) {
+        modal.style.display = 'none';
+        document.body.classList.remove('modal-open');
+        document.body.style.top = '';
+        window.scrollTo(0, scrollY); // Restore original scroll
     }
 }
