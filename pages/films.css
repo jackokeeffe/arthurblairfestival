@@ -289,7 +289,6 @@ body {
   }
 }
 
-/* Extra small screens */
 @media (max-width: 480px) {
   /* Header - smaller and distributed */
   #header {
@@ -298,30 +297,30 @@ body {
     letter-spacing: 0.5px;
     justify-content: space-around;
   }
-  
+
   #header p {
     flex: 1;
     text-align: center;
     min-width: 0;
   }
-  
-  /* Films grid - keep 2 columns on phone */
+
+  /* Films grid - 2 columns on phone */
   #films {
     grid-template-columns: repeat(2, 1fr);
-    gap: 18px; /* Increased from 10px to 18px */
+    gap: 18px;
   }
-  
+
   /* Bigger posters for phone */
   #films img#poster {
-    width: 130px;
-    height: 195px;
+    width: 160px;
+    height: 240px;
   }
-  
+
   /* Body padding adjustment */
   body {
     padding: 20px 10px;
   }
-  
+
   /* Modal adjustments - stack content and move close button */
   #modal-content {
     flex-direction: column;
@@ -329,12 +328,12 @@ body {
     padding: 40px 15px 15px 15px; /* Extra top padding for close button */
     width: 95%;
   }
-  
+
   #modal-content img#poster {
     max-width: 80%;
     align-self: center;
   }
-  
+
   /* Modal close button - make sure it's above content */
   #modal-close {
     font-size: 1.8rem;
@@ -349,4 +348,25 @@ body {
     align-items: center;
     justify-content: center;
   }
+
+  /* Make modals scrollable and align to top */
+  #modal-days,
+  #modal-love,
+  #modal-which,
+  #modal-knight,
+  #modal-leap,
+  #modal-aesthete,
+  #modal-watchmen,
+  #modal-sister {
+    align-items: flex-start;
+    overflow-y: auto;
+  }
+}
+
+body.modal-open {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
