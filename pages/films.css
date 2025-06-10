@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Reset and base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+body {
+  font-family: 'Arial Black', Arial, sans-serif;
+  background: #000;
+  color: #fff;
+  line-height: 1.4;
+  padding: 30px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+#header {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  font-weight: 900;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 15px;
+  width: 100%;
+  max-width: 1000px;
+  cursor: default;
+}
+
+#header p:hover {
+  color: #ccc;
+  cursor: pointer;
+}
+
+/* Films container as 3-column grid */
+#films {
+  display: grid;
+  line-height: 0.5;
+  grid-template-columns: repeat(4, 1fr); /* 3 columns exactly */
+  gap: 36px;
+  padding: 10px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+
+/* Each film entry */
+#films > div {
+  display: flex;
+  background: #111;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+#films > div:hover {
+  border: 2px solid #000000;
+}
+
+/* Poster images - target by ID selector (even if repeated) */
+#films img#poster {
+  width: 200px; /* fixed size */
+  height: 300px; /* 2:3 ratio */
+  object-fit: cover;
+  flex-shrink: 0;
+  border-right: 2px solid #fff;
+}
+
+/* Footer */
+#footer {
+  margin-top: 60px;
+  color: #777;
+  font-size: 0.85rem;
+  text-align: center;
+  user-select: none;
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* Hidden by default *
+
+/* Modal overlay: fullscreen, dark transparent background */
+
+#modal-days {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+#modal-love {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+#modal-which {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+#modal-knight {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+#modal-leap {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+#modal-aesthete {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+#modal-watchmen {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+#modal-sister {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+
+/* Modal content box: centered window */
+#modal-content {
+  position: relative; /* Add this line */
+  display: flex;
+  gap: 20px; /* space between image and info */
+  align-items: flex-start; /* align top edges */
+  background: #111;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 900px;
+  width: 90%;
+  box-sizing: border-box;
+}
+
+
+/* Close button in top right corner */
+#modal-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 900;
+  user-select: none;
+  line-height: 1;
+}
+
+#modal-close:hover {
+  color: #2e2e2e;
+}
+
+#modal-content img#poster {
+  max-width: 30%;
+  height: auto;
+  object-fit: contain;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+#modal-content .info {
+  flex: 1; /* take remaining horizontal space */
+  color: #eee;
+  overflow-y: auto;
+}
+
+#modal-content .info h3 {
+  margin-top: 0;
+  font-weight: 900;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+}
+
+#modal-content .info p {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  /* Header adjustments */
+  #header {
+    gap: 15px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    flex-wrap: wrap;
+  }
+  
+  /* Films grid - 2 columns on tablet */
+  #films {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 5px;
+  }
+  
+  /* Smaller poster images */
+  #films img#poster {
+    width: 150px;
+    height: 225px;
+  }
+  
+  /* Modal adjustments */
+  #modal-content {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    width: 95%;
+  }
+  
+  #modal-content img#poster {
+    max-width: 100%;
+    align-self: center;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  /* Header - smaller and distributed */
+  #header {
+    gap: 8px;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    justify-content: space-around;
+  }
+  
+  #header p {
+    flex: 1;
+    text-align: center;
+    min-width: 0;
+  }
+  
+  /* Films grid - keep 2 columns on phone */
+  #films {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px; /* Increased from 10px to 18px */
+  }
+  
+  /* Bigger posters for phone */
+  #films img#poster {
+    width: 130px;
+    height: 195px;
+  }
+  
+  /* Body padding adjustment */
+  body {
+    padding: 20px 10px;
+  }
+  
+  /* Modal adjustments - stack content and move close button */
+  #modal-content {
+    flex-direction: column;
+    gap: 15px;
+    padding: 40px 15px 15px 15px; /* Extra top padding for close button */
+    width: 95%;
+  }
+  
+  #modal-content img#poster {
+    max-width: 80%;
+    align-self: center;
+  }
+  
+  /* Modal close button - make sure it's above content */
+  #modal-close {
+    font-size: 1.8rem;
+    top: 8px;
+    right: 12px;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arthur Blair Film Festival | Films</title>
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="stylesheet" href="films.css">
+</head>
+<body>
+    <div id="header">
+        <p><a href="../index.html">Festival</a></p>
+        <p><a href="films.html">films</a></p>
+        <p><a href="submit.html">submit</a></p>
+        <p><a href="about.html">about</a></p>
+    </div>
+
+<!-- Modal overlay -->
+    <div id="modal-days">
+        <div id="modal"></div>
+        <div id="modal-content">
+            <button id="modal-close" onclick= "hideElement(1)" aria-label="Close popup">&times;</button>
+            <img id="poster" src="../posters/days.jpg" alt="">
+            <div class="info">
+                <h3>Days of Change</h3>
+                <br>
+                <p>Director: Jack O'Keeffe</p>
+                <p>Logline: You can't outrun change!</p>
+                <p>Description: a group of student activists attempt to meet with their mayor to protest the construction of a pipeline.</p>
+                <p>Genre: Drama, Comedy</p>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-love">
+        <div id="modal">
+        <div id="modal-content">
+            <button id="modal-close" onclick= "hideElement(2)" aria-label="Close popup">&times;</button>
+            <img id="poster" src="../posters/love.jpg" alt="">
+            <div class="info">
+                <h3>love.1</h3>
+                <br>
+                <p>Director: Jack O'Keeffe</p>
+                <p>Logline: 116 images, 1 minute</p>
+                <p>Description: a visual-poem on the themes of love.</p>
+                <p>Genre: Romance</p>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-which">
+        <div id="modal"></div>
+        <div id="modal-content">
+            <button id="modal-close" onclick= "hideElement(3)" aria-label="Close popup">&times;</button>
+            <img id="poster" src="../posters/whichway.jpg" alt="">
+            <div class="info">
+                <h3>which//way</h3>
+                <br>
+                <p>Director: Jack O'Keeffe</p>
+                <p>Logline: Nothing endures but change</p>
+                <p>Description: stock footage tells the story of two lives - before and after a financial crisis.</p>
+                <p>Genre: Crime</p>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-knight">
+        <div id="modal"></div>
+        <div id="modal-content">
+            <button id="modal-close" onclick= "hideElement(4)" aria-label="Close popup">&times;</button>
+            <img id="poster" src="../posters/knight-of-faith.jpg" alt="">
+            <div class="info">
+                <h3>Knight of Faith</h3>
+                <br>
+                <p>Director: Johannes de Silentio</p>
+                <p>Logline: The true knight is a witness, not a teacher</p>
+                <p>Description: a man defends his religion against a crowd of onlookers.</p>
+                <p>Genre: Drama</p>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-watchmen">
+        <div id="modal"></div>
+        <div id="modal-content">
+            <button id="modal-close" onclick= "hideElement(5)" aria-label="Close popup">&times;</button>
+            <img id="poster" src="../posters/watchmen.jpg" alt="">
+            <div class="info">
+                <h3>The Watchmen of Copenhagen</h3>
+                <br>
+                <p>Director: Vigilius Haufniensis</p>
+                <p>Logline: Anxiety makes me dizzy</p>
+                <p>Description: two anxious watchmen come along the ghost of their former president, who hints at an upcoming revolution.</p>
+                <p>Genre: Comedy, Drama</p>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-leap">
+        <div id="modal"></div>
+        <div id="modal-content">
+            <button id="modal-close" onclick= "hideElement(6)" aria-label="Close popup">&times;</button>
+            <img id="poster" src="../posters/leap.jpg" alt="">
+            <div class="info">
+                <h3>Leap of Faith</h3>
+                <br>
+                <p>Director: Johannes Climacus</p>
+                <p>Logline: It's either you or I</p>
+                <p>Description: a suicidal businessman, standing on the egde of a skyscraper, debates with another man over whom should be the first to jump.</p>
+                <p>Genre: Comedy</p>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-aesthete">
+        <div id="modal"></div>
+        <div id="modal-content">
+            <button id="modal-close" onclick= "hideElement(7)" aria-label="Close popup">&times;</button>
+            <img id="poster" src="../posters/aesthete.jpg" alt="">
+            <div class="info">
+                <h3>The Aesthete and The Judge</h3>
+                <br>
+                <p>Director: Victor Eremita</p>
+                <p>Logline: Everyone makes a choice</p>
+                <p>Description: after discovering a mass of papers, unpublished by their author, Victor goes about editing a dialogue between an aesthete and a judge.</p>
+                <p>Genre: Documentary</p>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-sister">
+        <div id="modal"></div>
+        <div id="modal-content">
+            <button id="modal-close" onclick= "hideElement(8)" aria-label="Close popup">&times;</button>
+            <img id="poster" src="../posters/candice.jpg" alt="">
+            <div class="info">
+                <h3>My Sister, Candice!</h3>
+                <br>
+                <p>Director: François Marie</p>
+                <p>Logline: All the best!</p>
+                <p>Description: a happy man is faced with a series of unfortunate events.</p>
+                <p>Genre: Drama</p>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="films">
+        
+
+        <div>
+            <a onclick="showElement(1)"><img id="poster" src="../posters/days.jpg" alt=""></a>
+        </div>
+
+        <div>
+            <a onclick="showElement(2)"><img id="poster" src="../posters/love.jpg" alt=""></a>
+        </div>
+        
+        <div>
+            <a onclick="showElement(3)"><img id="poster" src="../posters/whichway.jpg" alt=""></a>
+        </div>
+
+        <div>
+            <a onclick="showElement(4)"><img id="poster" src="../posters/knight-of-faith.jpg" alt=""></a>
+        </div>
+        
+        <div>
+            <a onclick="showElement(5)"><img id="poster" src="../posters/watchmen.jpg" alt=""></a>
+        </div>
+        
+        <div>
+            <a onclick="showElement(6)"><img id="poster" src="../posters/leap.jpg" alt=""></a>
+        </div>
+        
+        <div>
+            <a onclick="showElement(7)"><img id="poster" src="../posters/aesthete.jpg" alt=""></a>
+            
+        </div>
+        
+        <div>
+            <a onclick="showElement(8)"><img id="poster" src="../posters/candice.jpg" alt=""></a>
+        </div>
+    </div>
+
+    <div id="footer">
+        <p>sponsored by <a target="_blank" href="https://www.proof-of-concept.ca">PROOFOFCONCEPT Prod.</a></p>
+        <p>contact: <a href="mailto:festival@proof-of-concept.ca">festival@proof-of-concept.ca</a></p>
+    </div>
+</body>
+<script src="film.js"></script>
+</html>
